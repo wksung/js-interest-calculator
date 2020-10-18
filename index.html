@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="central-container">
+        <div class="central-container__bg-white">
+            <h1 class="h4 m-3">Interest Calculator</h1>
+            <hr class="mx-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 your-strategy">
+                        <h2 class="h5 text-green">Your Strategy</h2>
+                        <label class="mt-2">Initial Deposit:</label>
+                        <input class="your-strategy__initial-deposit input-field" type="number" placeholder="$10,000">
+                        <label class="mt-2">Compound Frequency:</label>
+                        <select class="your-strategy__compound-frequency dropdown-field">
+                            <option>Annually</option>
+                            <option selected="selected">Monthly</option>
+                            <option>Fortnightly</option>
+                            <option>Weekly</option>
+                            <option>Daily</option>
+                        </select>
+                        <label class="mt-2">Number of Years (max 50):</label>
+                        <input class="your-strategy__no-of-years input-field" type="number" placeholder="10 Years" min="1" max="50">
+                        <label class="mt-2">Interest Rate (max 20%):</label>
+                        <input class="your-strategy__interest-rate input-field" type="number" placeholder="5.12%" min="1" max="20">
+                        <button class="btn btn-success btn-calculate mt-3">Calculate</button>
+                    </div>
+                    <hr>
+                    <div class="col-lg-9">
+                        <div class="chart-container mt-5 mt-lg-0">
+                            <h2 class="h5 text-green">Your Result</h2>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <div class="result-container">
+                            <div class="row mt-4">
+                                <div class="col-7">
+                                    <p class="initial-deposit-text font-14"></p>
+                                    <p class="total-interest-text font-14"></p>
+                                    <p class="total-savings-text font-weight-bold font-14"></p>
+                                </div>
+                                <div class="col-5">
+                                    <p class="initial-deposit text-right font-14"></p>
+                                    <p class="total-interest text-right font-14"></p>
+                                    <p class="total-savings text-green font-weight-bold text-right font-21"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

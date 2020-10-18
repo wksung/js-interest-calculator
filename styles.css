@@ -1,0 +1,80 @@
+body{
+    background: #e5e5e5;
+}
+.central-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.central-container__bg-white{
+    width: 90%;
+    height: 85%;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+.text-green{
+    color: #98b33b;
+}
+.input-field{
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    width: 100%;
+}
+.dropdown-field{
+    border: 1px solid #e5e5e5;
+    background: white;
+    width: 100%;
+    height: 30px;
+}
+.chart-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.initial-deposit-text,
+.total-interest-text{
+    display: flex;
+    align-items: center;
+}
+.btn-success{
+    background-color: #98b33b;
+    border: 1px solid #98b33b;
+}
+.font-14{
+    font-size: 14px;
+}
+.font-21{
+    font-size: 21px;
+}
+.red-line{
+    height: 14px;
+    width: 14px;
+    background: rgb(181, 55, 55);
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.green-line{
+    height: 14px;
+    width: 14px;
+    background: rgb(152, 179, 59);
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+@media(min-width: 1150px){
+    #myChart{
+        width: 85% !important;
+        height: 85% !important;
+    }
+}
+
+@media(max-width:992px){
+    .central-container{
+        height: 100%;
+    }
+    .total-savings{
+        font-size: 16px;
+    }
+}
